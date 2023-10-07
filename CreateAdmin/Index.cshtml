@@ -1,0 +1,31 @@
+﻿@page
+@model CourseHub.UI.Areas.Admin.Pages.CreateAdmin.IndexModel
+@{
+}
+
+<div class="container">
+    <h2>Create User</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="Username" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="Fullname" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="Password" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="repassword">Re-enter Password:</label>
+            <input type="password" id="repassword" name="Repassword" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>

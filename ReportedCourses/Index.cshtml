@@ -1,0 +1,28 @@
+﻿@page
+@model CourseHub.UI.Areas.Admin.Pages.ReportedCourses.IndexModel
+@{
+}
+
+<h2>Reported Courses</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Report Reason</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reportedCourse in Model.ReportedCourses)
+        {
+            <tr>
+                <td>@reportedCourse.CourseName</td>
+                <td>@reportedCourse.ReportReason</td>
+                <td>
+                    <a class="btn btn-primary" asp-page="ContactInstructor" asp-route-courseId="@reportedCourse.CourseId">Contact Instructor</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
